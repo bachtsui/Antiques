@@ -1,5 +1,7 @@
+<h3>Traits</h3>
+
 <% @traits.each do |trait| %>
   <p>
-    <strong>Name:</strong> <%= trait.name %><br>
+    <strong>Name:</strong> <%=link_to trait.name, emperor_path(trait.emperor_id) %><br>
   </p>
 <% end %>

@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   root to: "welcome#index"
 
   #Routes for Traits
-  get "/traits", to: "traits#index", as:"traits"
+  get "/traits", to: "traits#index"
+
+  #Routes for Emperor
+  get "/emperors/:id", to:"emperors#show", as:"emperor"
 end
