@@ -1,5 +1,16 @@
 <br>
 <br>
 <br>
-This is the Emperor's Index Page
-Test to see if connected to the navbar
+
+<div class="container">
+	<h3 class="text-center">Ming Dynasty</h3>
+</div>
+
+	<% @emperors.each do |emperor| %>
+		<div class="container">
+		  <p class="text-center">
+		    <strong>Name:</strong> <%=emperor.name%><br>
+		    <strong>Year:</strong> <%=emperor.year%><br>
+		  </p>
+		</div>
+	<% end %>
