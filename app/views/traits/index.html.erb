@@ -1,7 +1,16 @@
-<h3>Traits</h3>
+<br>
+<br>
+<!-- Find a better way to add space to the top-->
 
-<% @traits.each do |trait| %>
-  <p>
-    <strong>Name:</strong> <%=link_to trait.name, emperor_path(trait.emperor_id) %><br>
-  </p>
-<% end %>
+<div class="container">
+	<h3 class="text-center">Singular Traits</h3>
+</div>
+
+	<% @traits.each do |trait| %>
+		<div class="container">
+		  <p class="text-center">
+		    <strong>Name:</strong> <%=link_to trait.name, emperor_path(trait.emperor_id) %><br>
+		  </p>
+		</div>
+	<% end %>
+

@@ -5,8 +5,36 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- custom styles (always require after Bootstrap) -->
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+	<!-- Start of Navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Antique Database</a>
+    </div>
+    <div class="collapse navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">  
+      	<li><%= link_to "TRAITS", root_path %></li>  
+      	<li><%= link_to "EMPERORS", root_path %></li>  
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+<!-- End of Navbar -->
 
 <%= yield %>
 
